@@ -4,7 +4,7 @@
 }
 
 .header {
-    background: #EEE;
+    background: var(--header-bg-color);
 }
 
 .top-bar {
@@ -46,8 +46,8 @@
         height: 50px;
 
         border-radius: 8px;
-        background-color: #fff;
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
+        background-color: var(--top-act-group-bg-color);
+        box-shadow: 0px 20px 60px 10px var( --top-act-group-shadow);
     }
 
     &__group--single &__btn {
@@ -70,7 +70,7 @@
     &__separate {
         width: 0.1rem;
         height: 3rem;
-        background: #EDEDF6;
+        background: var(--top-act-group-separate);
     }
     
 
