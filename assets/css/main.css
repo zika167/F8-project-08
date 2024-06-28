@@ -143,6 +143,7 @@ body {
   font-size: 1.6rem;
   font-family: "Gordita", "sans-serif";
   color: var(--text-color);
+  background: var(--body-bg);
 }
 
 html {
@@ -1203,24 +1204,37 @@ button {
     --grid-gutter-y: 90px;
   }
 }
-html {
+html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(10%) sepia(31%)
     saturate(921%) hue-rotate(210deg) brightness(97%) contrast(101%);
+  --body-bg: #292e39;
   --header-bg-color: #171c28;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
+  --dropdown-bg-color: #2f3441;
+  --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(55%)
+    saturate(317%) hue-rotate(187deg) brightness(102%) contrast(83%);
 }
 
 html {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(10%) sepia(31%)
     saturate(921%) hue-rotate(210deg) brightness(97%) contrast(101%);
+  --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
-  --top-act-group-shadow: rgba(237, 237, 246, 0.20);
+  --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
+  --dropdown-bg-color: #fff;
+  --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+}
+@media (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -1233,6 +1247,7 @@ html {
 }
 
 .top-bar {
+  position: relative;
   padding: 30px 0;
 }
 @media (max-width: 991.98px) {
@@ -1267,11 +1282,16 @@ html {
     display: none;
   }
 }
-.navbar__list {
-  gap: 30px;
+.navbar__item:first-child a {
+  padding-left: 0;
+}
+.navbar__item:hover .dropdown {
+  display: block;
 }
 .navbar__link {
   gap: 6px;
+  height: 50px;
+  padding-left: 30px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
@@ -1363,6 +1383,28 @@ html {
   .logo__img {
     width: 24px;
   }
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  display: none;
+}
+.dropdown__inner {
+  position: relative;
+  padding: 30px;
+  border-radius: 2rem;
+  background: var(--dropdown-bg-color);
+  box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+}
+.dropdown__inner::before {
+  position: absolute;
+  content: url(../icon/dropdown-arrow.svg);
+  top: -14px;
+  left: var(--arrow-left-pos);
+  transform: translateX(-50%);
+  filter: var(--dropdown-arrow-color);
 }
 
 /*# sourceMappingURL=main.css.map */
