@@ -1,12 +1,44 @@
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(10%) sepia(31%)
+    saturate(921%) hue-rotate(210deg) brightness(97%) contrast(101%);
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Gordita', 'sans-serif';
+  font-size: 1.6rem;
+  font-family: "Gordita", "sans-serif";
+  color: var(--text-color);
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+.icon {
+  filter: var(--icon-color);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }

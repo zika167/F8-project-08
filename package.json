@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "stylelint": "^16.6.1",
+    "stylelint-prettier": "^5.0.0"
+  }
 }
