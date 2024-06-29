@@ -32,10 +32,10 @@
 }
 
 .navbar {
-  margin-left: 144px;
+  margin-left: 129px;
 
   @include abstracts.breakpoint(xl) {
-    margin-left: 50px;
+    margin-left: 25px;
   }
 
   @include abstracts.breakpoint(lg) {
@@ -47,10 +47,6 @@
   }
 
   &__item {
-    &:first-child a {
-      padding-left: 0;
-    }
-
     &:hover .dropdown {
       display: block;
     }
@@ -60,7 +56,7 @@
     @extend %flexItemsCenter;
     gap: 6px;
     height: 50px;
-    padding-left: 30px;
+    padding: 0 15px;
 
     font-size: 1.5rem;
     font-weight: 500;
