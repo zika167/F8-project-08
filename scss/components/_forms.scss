@@ -1,10 +1,33 @@
+$error-color: #ed4337;
+
 .form {
+  &:has(:invalid) &__submit-btn {
+    opacity: 0.5;
+    // pointer-events: none;
+  }
+
   &__group {
     margin-top: 20px;
 
     &--inline {
       display: flex;
       align-items: center;
+    }
+  }
+
+  &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+    .form__text-input {
+      border-color: $error-color;
+      background-color: rgba($color: $error-color, $alpha: 0.1);
+    }
+
+    .form__error,
+    .form__input-icon-error {
+      display: block;
+    }
+
+    .form__input-icon {
+      display: none;
     }
   }
 
@@ -33,6 +56,23 @@
     &::placeholder {
       color: #d2d1d6;
     }
+  }
+
+  &__error {
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 15px;
+    color: $error-color;
+    display: none;
+  }
+
+  &__input-icon-error {
+    display: none;
+    width: 18px;
+    height: 18px;
+    margin-left: 12px;
+    animation: shake 0.5s;
   }
 
   &__pull-right {

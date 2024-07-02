@@ -106,13 +106,21 @@
                   id=""
                   class="form__input"
                   placeholder="Email"
+                  value="admin@grocerymart.com"
+                  required
                 />
                 <img
                   src="./assets/icon/email.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icon/error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
               </div>
+              <p class="form__error">Email chưa đúng định dạng</p>
             </div>
             <div class="form__group">
               <div class="form__text-input">
@@ -122,13 +130,22 @@
                   id=""
                   class="form__input"
                   placeholder="Password"
+                  value="123123123"
+                  required
+                  minlength="6"
                 />
                 <img
                   src="./assets/icon/lock.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icon/error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
               </div>
+              <p class="form__error">Mật khẩu ít nhất 6 ký tự</p>
             </div>
             <div class="form__group">
               <div class="form__text-input">
@@ -138,13 +155,22 @@
                   id=""
                   class="form__input"
                   placeholder="Confirm password"
+                  value="123123123"
+                  required
+                  minlength="6"
                 />
                 <img
                   src="./assets/icon/lock.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icon/error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
               </div>
+              <p class="form__error">Mật khẩu ít nhất 6 ký tự</p>
             </div>
             <div class="form__group form__group--inline">
               <label class="form__checkbox">
@@ -156,10 +182,16 @@
               >
             </div>
             <div class="form__group auth__btn-group">
-              <button class="btn btn--primary auth__btn">Sign Up</button>
+              <button class="btn btn--primary auth__btn form__submit-btn">
+                Sign Up
+              </button>
               <button class="btn btn--outline auth__btn btn--no-margin">
-                <img src="./assets/icon/google.svg" alt="" class="btn-icon" />
-                Sign in with Gmail
+                <img
+                  src="./assets/icon/google.svg"
+                  alt=""
+                  class="btn-icon icon"
+                />
+                Sign in with Google
               </button>
             </div>
           </form>
