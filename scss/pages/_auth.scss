@@ -1,0 +1,126 @@
+@use "../abstracts";
+
+.auth {
+  display: flex;
+  min-height: 100vh;
+
+  &__intro,
+  &__content {
+    flex: 1;
+    padding: 0 30px;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include abstracts.screen(md) {
+      padding: 80px 20px 50px;
+      justify-content: space-between;
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    &-text {
+      text-align: center;
+      width: 41.2rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+    }
+  }
+
+  &__content {
+    background-color: var(--auth-content-bg);
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      width: min(460px, 100%);
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    @include abstracts.screen(md) {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      transition: translate 0.5s;
+      overflow-y: auto;
+
+      &.hide {
+        translate: 100%;
+      }
+    }
+  }
+
+  &__heading {
+    margin-top: 40px;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+
+  &__desc {
+    width: 46rem;
+    padding: 10px 20px 0;
+    font-size: 1.5rem;
+    color: #9e9da8;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  &__link {
+    padding-left: 10px;
+    color: #0071dc;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 146.667%;
+
+    .form__checkbox + & {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: 60px;
+
+    color: #9e9da8;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 144.444%;
+  }
+}
