@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 $error-color: #ed4337;
 
 .form {
@@ -39,6 +41,10 @@ $error-color: #ed4337;
     padding: 0 12px;
     border-radius: 10px;
     border: 1.5px solid #d2d1d6;
+
+    &:focus-within {
+      border-color: #77dae6;
+    }
   }
 
   &__input {
@@ -54,7 +60,7 @@ $error-color: #ed4337;
     }
 
     &::placeholder {
-      color: #d2d1d6;
+      color: var(--form-placeholder-color);
     }
   }
 
@@ -90,6 +96,10 @@ $error-color: #ed4337;
       font-size: 1.5rem;
       font-weight: 500;
       line-height: 146.667%;
+
+      @include abstracts.screen(md) {
+        font-size: 1.4rem;
+      }
     }
   }
 }
