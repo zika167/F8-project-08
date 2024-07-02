@@ -2154,7 +2154,9 @@ html {
 
 .btn {
   height: 46px;
-  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 5px;
   border-radius: 6px;
   background: #f8f8fb;
   font-size: 1.8rem;
