@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-size: 1.6rem;
   font-family: "Gordita", "sans-serif";
@@ -58,4 +62,14 @@ button {
   outline: none;
   padding: 0;
   cursor: pointer;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 600;
 }
