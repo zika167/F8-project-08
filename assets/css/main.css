@@ -2609,6 +2609,19 @@ html {
   }
 }
 
+.message {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  border: 1.5px solid #5bc45f;
+  background: rgba(39, 243, 117, 0.2);
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2756,9 +2769,15 @@ html {
     font-size: 1.4rem;
   }
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 .auth__link {
   padding-left: 10px;
