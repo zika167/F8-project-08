@@ -6,6 +6,8 @@
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   background: var(--header-bg-color);
 }
 
@@ -270,10 +272,10 @@
 
 .act-dropdown {
   position: absolute;
-  top: 48px;
+  top: 40px;
   right: -60px;
   width: min(500px, 100vw);
-  padding-top: 28px;
+  padding-top: 36px;
   display: none;
 
   &__inner {

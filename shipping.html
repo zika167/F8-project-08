@@ -69,19 +69,19 @@
         <!-- Breadcrumbs -->
         <div class="checkout-container">
           <ul class="breadcrumbs checkout-page__breadcrumbs">
-            <li class="form-option">
-              <a href="./" class="breadcrumbs__link">
+            <li>
+              <a href="./index-logined.html" class="breadcrumbs__link">
                 Home
                 <img src="./assets/icon/arrow-right.svg" alt="" />
               </a>
             </li>
-            <li class="form-option">
+            <li>
               <a href="./checkout.html" class="breadcrumbs__link">
                 Checkout
                 <img src="./assets/icon/arrow-right.svg" alt="" />
               </a>
             </li>
-            <li class="form-option">
+            <li>
               <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"
                 >Shipping</a
               >
@@ -127,12 +127,12 @@
                     <article class="address-card">
                       <div class="address-card__left">
                         <div class="address-card__choose">
-                          <label class="address-card__checkbox">
+                          <label class="cart-info__checkbox">
                             <input
-                              type="checkbox"
-                              name=""
+                              type="radio"
+                              name="shipping-address"
                               checked
-                              class="address-card__checkbox-input"
+                              class="cart-info__checkbox-input"
                             />
                           </label>
                         </div>
@@ -152,7 +152,7 @@
                       <div class="address-card__right">
                         <div class="address-card__ctrl">
                           <button
-                            class="address-card__ctrl-btn js-toggle"
+                            class="cart-info__edit-btn js-toggle"
                             toggle-target="#add-new-address"
                           >
                             <img
@@ -170,11 +170,11 @@
                     <article class="address-card">
                       <div class="address-card__left">
                         <div class="address-card__choose">
-                          <label class="address-card__checkbox">
+                          <label class="cart-info__checkbox">
                             <input
-                              type="checkbox"
-                              name=""
-                              class="address-card__checkbox-input"
+                              type="radio"
+                              name="shipping-address"
+                              class="cart-info__checkbox-input"
                             />
                           </label>
                         </div>
@@ -195,7 +195,7 @@
                       <div class="address-card__right">
                         <div class="address-card__ctrl">
                           <button
-                            class="address-card__ctrl-btn js-toggle"
+                            class="cart-info__edit-btn js-toggle"
                             toggle-target="#add-new-address"
                           >
                             <img
@@ -475,7 +475,7 @@
                   <span>$201.65</span>
                 </div>
                 <a
-                  href="#!"
+                  href="./payment.html"
                   class="cart-info__next-btn btn btn--primary btn--rounded"
                 >
                   Continue to checkout
@@ -517,19 +517,21 @@
     <!-- Modal: confirm remove shopping cart item -->
     <div id="delete-confirm" class="modal hide">
       <div class="modal__content">
-        <div class="modal__text">Lorem ipsum dolor sit amet consectetur?</div>
+        <p class="modal__text">
+          Do you want to remove this item from shopping cart?
+        </p>
         <div class="modal__bottom">
           <button
-            class="btn btn--small btn--text modal__btn js-toggle"
+            class="btn btn--small btn--outline modal__btn js-toggle"
             toggle-target="#delete-confirm"
           >
             Cancel
           </button>
           <button
-            class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
+            class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
             toggle-target="#delete-confirm"
           >
-            Confirm
+            Delete
           </button>
         </div>
       </div>
@@ -629,7 +631,12 @@
                   alt=""
                   class="form__input-icon-error"
                 />
+
+                <!-- Select dialog -->
                 <div id="city-dialog" class="form__select-dialog hide">
+                  <h2 class="form__dialog-heading d-none d-sm-block">
+                    City/District/Town
+                  </h2>
                   <button
                     class="form__close-dialog d-none d-sm-block js-toggle"
                     toggle-target="#city-dialog"
@@ -643,7 +650,7 @@
                       class="form__search-input"
                     />
                     <img
-                      src="./assets/icons/search.svg"
+                      src="./assets/icon/search.svg"
                       alt=""
                       class="form__search-icon icon"
                     />
@@ -706,7 +713,7 @@
           </div>
           <div class="modal__bottom">
             <button
-              class="btn btn--small btn--text modal__btn js-toggle"
+              class="btn btn--small btn--outline modal__btn js-toggle"
               toggle-target="#add-new-address"
             >
               Cancel
