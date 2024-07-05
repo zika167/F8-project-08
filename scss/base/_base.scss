@@ -41,8 +41,22 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 
-input {
+input,
+textarea {
   background-color: transparent;
+}
+
+input,
+textarea:-webkit-autofill,
+input,
+textarea:-webkit-autofill:focus,
+input,
+textarea:-webkit-autofill:active,
+input,
+textarea:-webkit-autofill:hover {
+  transition: background-color 1s 9999s;
+  -webkit-text-fill-color: var(--text-color);
+  caret-color: var(--text-color);
 }
 
 .icon {
