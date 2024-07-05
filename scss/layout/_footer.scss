@@ -144,6 +144,7 @@
       &::placeholder {
         color: #9e9da8;
         font-weight: 400;
+        -webkit-text-fill-color: var(--form-placeholder-color);
       }
     }
   }
